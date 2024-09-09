@@ -29,7 +29,7 @@ s3
 1
 "((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A14) : C2"
 1
-c20
+s5
 c8
 c10
 c16
@@ -39,29 +39,29 @@ c46
 c18
 "(C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : S19"
 1
-"C2 x ((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : S17)"
+
 1
 "C2 x (((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A14) x ((C2 x C2 x C2 x C2 x C2 x C2) : S7))"
 "((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : S11) x (((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A10) : C2)"
 c12
 1
-
+"(C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A23"
 c2
 "(C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A24"
 c20
 "C2 x ((C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A25)"
 1
-"(C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A23"
+
 c18
-"(C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2) : A24"
+
 c6
 c18
 1
 
 1
 c60
-c6
-c18
+
+s6
 c16
 
 1
@@ -69,16 +69,16 @@ c16
 c16
 
 1
-c16
+
 1
 c9
-c16
+
 
 c6
 
 1
 
-
+S4
 c54
 
 
@@ -106,13 +106,13 @@ c46
 c12
 1
 
-
+1
 
 c20
 
 1
 
-
+c18
 
 
 c12
@@ -121,6 +121,70 @@ c29
 c2
 c110
 c10
+
+s3
+
+1
+S7
+c32
+
+1
+
+c10
+c18
+
+
+1
+
+1
+
+c12
+c46
+c70
+
+c12
+c28
+
+
+1
+
+1
+
+
+
+c30
+
+1
+c52
+c78
+
+c4
+
+1
+
+
+
+
+
+c2
+
+
+
+1
+
+
+
+c20
+c58
+1
+
+1
+
+c6
+
+c22
+
+c30
 
 
 
