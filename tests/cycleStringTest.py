@@ -1,5 +1,6 @@
 import unittest
 import permutations
+import primeList
 import cycleNotation
 import cycleString
 import numpy
@@ -22,7 +23,7 @@ class TestCycleNotation(unittest.TestCase):
 
     def test_composite(self):
         n = 12
-        gens = permutations.permutations(n)
+        gens = primeList.permutations(n)
         cycles = cycleNotation.cycleNotation(gens, n)
         string = cycleString.cyclesString(cycles)
         print(cycles)
