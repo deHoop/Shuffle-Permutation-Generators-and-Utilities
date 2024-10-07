@@ -1,20 +1,43 @@
 import permutations
 import cycleString
 import cycleNotation
-import primePermutations
+import distinctPermutations
 import pandas
+import primefac
+import numpy
 
-# csv = pandas.read_csv("template_csv.csv")
-# csv.to_csv("gap.csv", index=False)
+def main():
+    for n in range(2, 1001):
+        generators = distinctPermutations.permutations(n)
+        cycles = cycleNotation.cycleNotation(generators, n)
+        #now format the cycles as gap code
+        code = cycleString.cyclesString(cycles)
 
-for n in range(127, 1001):
-    generators = primePermutations.permutations(n)
-    cycles = cycleNotation.cycleNotation(generators, n)
-    #now format the cycles as gap code
-    code = cycleString.cyclesString(cycles)
+        csv = pandas.read_csv("gapcode2.csv")
+        print(str(n))
+        csv.loc[n-2, "a_n"] = str(n)
+        csv.loc[n-2, "gap_code"] = "g := Group(" + code + ");"
+        csv.to_csv("gapcode2.csv", index=False, float_format='%.0f')
 
-    csv = pandas.read_csv("gapcode.csv")
-    print(str(n))
-    csv.loc[n-2, "a_n"] = str(n)
-    csv.loc[n-2, "gap_code"] = "g := Group(" + code + ");"
-    csv.to_csv("gapcode.csv", index=False, float_format='%.0f')
+def helper(n, axisPermutations):
+    factorList = list(primefac.primefac(n))
+    array = range(1,n+1)
+    reshaped = numpy.reshape(array, newshape=factorList)
+    for a, j in enumerate (axisPermutations):
+        generators = []        
+        for k in j:
+            reshapedBack = distinctPermutations.transposeSeq(reshaped, k, n)
+            generators.append(reshapedBack)
+        cycles = cycleNotation.cycleNotation(generators, n)
+        permCycles = cycleNotation.cycleNotation(j, len(factorList), True)
+        print(cycles)
+        print(cycleString.cyclesString(cycles))
+        csv = pandas.read_csv("../gapcode3.csv")
+        csv.loc[a, "gap_code"] = "g := Group(" + cycleString.cyclesString(cycles) + ");"
+        csv.to_csv("../gapcode3.csv", index=False, float_format='%.0f')
+
+        print(permCycles)
+        print(cycleString.cyclesString(permCycles))
+
+if __name__ == "__main__":
+    main()
