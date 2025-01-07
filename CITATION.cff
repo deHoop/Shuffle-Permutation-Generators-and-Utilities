@@ -1,0 +1,16 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Shuffle Permutation Generators and Utilities
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Gideon
+    family-names: de Hoop
+    email: gideon.dehoop@ru.nl
+repository-code: >-
+  https://github.com/deHoop/Shuffle-Permutation-Generators-and-Utilities
+date-released: '2024-01-07'
