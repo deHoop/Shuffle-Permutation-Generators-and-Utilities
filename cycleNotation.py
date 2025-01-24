@@ -1,5 +1,6 @@
 def cycleNotation(generators, n, zeroIndexed=False):
-    #format as valid GAP syntax for this we need to write the array permutation as group syntax (1,2,3,4,5,6) -> (1,4,2,5,3,6) = (1)(2,4,5,3,2)(6)
+    #format as valid GAP syntax for this we need to write the array permutation
+    #as group syntax: (1,2,3,4,5,6) -> (1,4,2,5,3,6) = (1)(2,4,5,3,2)(6)
     allCycles = []
 
     for i in generators:
@@ -14,7 +15,7 @@ def cycleNotation(generators, n, zeroIndexed=False):
         while len(todo) > 0:
             index = todo[0]
             cycle = []
-            #if an index is unchanged then we can leave it out of the cycle notation
+            #if an index is unchanged then we can leave it out of the cycle
             if index == i[index-indexAdjust]:
                 todo.remove(index)
                 continue

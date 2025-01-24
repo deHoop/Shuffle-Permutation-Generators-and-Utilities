@@ -7,12 +7,10 @@ import more_itertools
 def arreq_in_list(myarr, list_arrays):
     return next((True for elem in list_arrays if numpy.array_equal(elem, myarr)), False)
 
-
 def permutations(n):
     factors = primefac.primefac(n)
     #get all possible factorizations of n
     factorList = partition.partitionFactors(list(factors))
-
     generators = []
     array = range(1,n+1)
     for i in factorList:
@@ -28,5 +26,4 @@ def permutations(n):
                 reshapedBack = numpy.reshape(transposed, n)
                 if not arreq_in_list(reshapedBack, generators):
                     generators.append(numpy.reshape(transposed, n))
-
     return generators

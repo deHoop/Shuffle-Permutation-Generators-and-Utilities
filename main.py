@@ -1,4 +1,3 @@
-import permutations
 import cycleString
 import cycleNotation
 import distinctPermutations
@@ -12,9 +11,7 @@ def main():
         cycles = cycleNotation.cycleNotation(generators, n)
         #now format the cycles as gap code
         code = cycleString.cyclesString(cycles)
-
         csv = pandas.read_csv("gapcode2.csv")
-        print(str(n))
         csv.loc[n-2, "a_n"] = str(n)
         csv.loc[n-2, "gap_code"] = "g := Group(" + code + ");"
         csv.to_csv("gapcode2.csv", index=False, float_format='%.0f')
@@ -30,14 +27,10 @@ def helper(n, axisPermutations):
             generators.append(reshapedBack)
         cycles = cycleNotation.cycleNotation(generators, n)
         permCycles = cycleNotation.cycleNotation(j, len(factorList), True)
-        print(cycles)
-        print(cycleString.cyclesString(cycles))
         csv = pandas.read_csv("../gapcode3.csv")
-        csv.loc[a, "gap_code"] = "g := Group(" + cycleString.cyclesString(cycles) + ");"
+        csv.loc[a, "gap_code"] = "g := Group(" 
+            + cycleString.cyclesString(cycles) + ");"
         csv.to_csv("../gapcode3.csv", index=False, float_format='%.0f')
-
-        print(permCycles)
-        print(cycleString.cyclesString(permCycles))
 
 if __name__ == "__main__":
     main()
