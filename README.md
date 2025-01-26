@@ -1,5 +1,5 @@
 # Introduction
-This project is for computing generating sets of permutation groups of arrays induced by reshapes and transpositions for use in [GAP](https://www.gap-system.org/)). This was the topic of my thesis, but for a formally published foundation we refer to [Ronse](https://www.sciencedirect.com/science/article/pii/0012365X83901000)). Without going into unessecary detail the generating sets we compute and provide are for the shapes consisting solely of prime number.
+This project is for computing generating sets of permutation groups of arrays induced by reshapes and transpositions for use in [GAP](https://www.gap-system.org/). This was the topic of my thesis, but for a formally published foundation we refer to [Ronse](https://www.sciencedirect.com/science/article/pii/0012365X83901000). Without going into unessecary detail the generating sets we compute and provide are for the shapes consisting solely of prime number.
 
 This repository consists of two major parts: 
 # Precomputed generating sets
